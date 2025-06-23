@@ -11,7 +11,7 @@ Webscrape project to get Amazon products' descriptions.
 
 
 Requirements
---------
+------------
 
 This library is compatible with Python >= 3.9 and requires:
 
