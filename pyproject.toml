@@ -14,7 +14,7 @@ dependencies = [
   "pandas",
   "python-dotenv",
 ]
-version = "0.0.3"
+dynamic = ["version"]
 keywords = ["amazon", "scraping"]
 readme = "README.rst"
 requires-python = ">=3.9"
@@ -25,3 +25,7 @@ Source = "https://github.com/ryzanbui02/amazon-description-scraper"
 [tool.setuptools.packages.find]
 where = ["src"]
 exclude = ["**/__pycache__", ".venv"]
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme = "dirty-tag"
