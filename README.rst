@@ -4,14 +4,22 @@ Amazon Description Scraper
 .. image:: https://img.shields.io/pypi/v/amazon-description-scraper.svg?logo=python&logoColor=white
    :target: https://pypi.org/project/amazon-description-scraper/
 
-Webscrape project to get suppliers' catalogs.
+.. image:: https://github.com/ryzanbui02/keepa/actions/workflows/test-and-deploy.yaml/badge.svg
+    :target: https://github.com/ryzanbui02/keepa/actions/workflows/test-and-deploy.yaml
+
+Webscrape project to get Amazon products' descriptions.
 
 
-Features
+Requirements
 --------
 
-- Uses Selenium and BeautifulSoup
-- Modular scraping system
+This library is compatible with Python >= 3.9 and requires:
+
+- ``bs4``
+- ``fake-useragent``
+- ``pandas``
+- ``requests``
+- ``selenium``
 
 
 Installation
