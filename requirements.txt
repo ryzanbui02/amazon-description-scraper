@@ -1,7 +1,5 @@
 bs4
 fake-useragent
+pandas
 requests
 selenium
-pandas
-python-dotenv
-pyyaml

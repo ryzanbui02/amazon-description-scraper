@@ -9,10 +9,9 @@ authors = [{ name = "Ryzan Bui", email = "ryzan.b@zendom.co.uk" }]
 dependencies = [
   "bs4",
   "fake-useragent",
+  "pandas",
   "requests",
   "selenium",
-  "pandas",
-  "python-dotenv",
 ]
 dynamic = ["version"]
 keywords = ["amazon", "scraping"]
