@@ -19,6 +19,9 @@ keywords = ["amazon", "scraping"]
 readme = "README.rst"
 requires-python = ">=3.9"
 
+[project.urls]
+Source = "https://github.com/ryzanbui02/amazon-description-scraper"
+
 [tool.setuptools.packages.find]
 where = ["src"]
 exclude = ["**/__pycache__", ".venv"]
