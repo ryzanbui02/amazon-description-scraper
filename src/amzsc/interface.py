@@ -42,6 +42,7 @@ def scrape_all(
     thread_id: int,
     thread_count: int = 10,
     proxy_key: Optional[str] = None,
+    headless: bool = True,
     is_remote: bool = False,
     remote_url: Optional[str] = None,
     jsonl_output_path: Optional[str] = None,
@@ -52,7 +53,10 @@ def scrape_all(
         proxy = get_proxy(proxy_key) if proxy_key else None
         position = ChromeDriverConfig.get_driver_position(thread_id, thread_count)
         options = ChromeDriverConfig.get_options(
-            proxy=proxy, position=position, user_agent=UserAgent().random
+            proxy=proxy,
+            position=position,
+            user_agent=UserAgent().random,
+            headless=headless,
         )
         if is_remote:
             driver = ChromeDriverConfig.get_remote_driver(options, remote_url)
@@ -78,12 +82,14 @@ class AmazonScraper:
     def __init__(
         self,
         proxy_key: Optional[str] = None,
+        headless: bool = True,
         is_remote: bool = False,
         remote_url: Optional[str] = None,
         jsonl_output_path: Optional[str] = None,
         logging_level: str = "DEBUG",
     ) -> None:
         self.__proxy_key = proxy_key
+        self.headless = headless
         self.is_remote = is_remote
         self.remote_url = remote_url
 
@@ -123,6 +129,7 @@ class AmazonScraper:
         ]
         args = [
             self.proxy_key,
+            self.headless,
             self.is_remote,
             self.remote_url,
             self.jsonl_output_path,
