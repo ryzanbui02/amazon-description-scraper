@@ -37,6 +37,12 @@ jobs:
         run: |
           pytest -v --cov amzsc --cov-report xml
 
+      - uses: codecov/codecov-action@v4
+        if: matrix.python-version == '3.13'
+        name: Upload coverage to codecov
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+
       - name: Build wheel
         if: matrix.python-version == '3.13'
         run: |

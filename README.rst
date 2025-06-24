@@ -7,6 +7,9 @@ Amazon Description Scraper
 .. image:: https://github.com/ryzanbui02/amazon-description-scraper/actions/workflows/test-and-deploy.yaml/badge.svg
     :target: https://github.com/ryzanbui02/amazon-description-scraper/actions/workflows/test-and-deploy.yaml
 
+.. image:: https://codecov.io/gh/ryzanbui02/amazon-description-scraper/branch/main/graph/badge.svg
+  :target: https://codecov.io/gh/ryzanbui02/amazon-description-scraper
+
 Webscrape project to get Amazon products' descriptions.
 
 
@@ -64,4 +67,4 @@ Next, to ensure your code meets minimum code styling standards, run::
 
   pre-commit run --all-files
 
-Finally, `create a pull request`_ from your fork and I'll be sure to review it.
+Finally, `create a pull request <https://github.com/ryzanbui02/amazon-description-scraper/pulls>`_ from your fork and I'll be sure to review it.
