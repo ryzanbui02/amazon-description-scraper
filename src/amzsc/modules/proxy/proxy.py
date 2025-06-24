@@ -1,7 +1,9 @@
 from typing import Optional
 from amzsc.modules.proxy.proxy_request import ProxyRequest
+from amzsc.handlers import safe_method
 
 
+@safe_method
 def get_proxy(api_key: Optional[str]) -> Optional[str]:
     """
     Get a new proxy from the ProxyRequest module.
