@@ -11,4 +11,4 @@ def get_zone(marketplace: Optional[str] = None) -> str:
         "gb": "co.uk",
         "de": "de",
     }
-    return zone[marketplace.lower()] or "de"
+    return zone.get(marketplace.lower(), "de")
