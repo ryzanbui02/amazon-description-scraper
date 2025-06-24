@@ -28,6 +28,15 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: ${{ matrix.python-version == '3.13' && 'pip' || '' }}
 
+      - name: Install
+        run: |
+          pip install .[test] --disable-pip-version-check
+          python -c "import amzsc"
+
+      - name: Unit testing
+        run: |
+          pytest -v --cov amzsc --cov-report xml
+
       - name: Build wheel
         if: matrix.python-version == '3.13'
         run: |
