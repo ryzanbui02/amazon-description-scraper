@@ -43,3 +43,25 @@ Brief Example
   asins = ["B07WC4TDJJ"]
   results = client.scrape(asins=asins, marketplace="US")
   print(results)
+
+
+Contributing
+------------
+Contribute to this repository by forking this repository and installing in
+development mode with::
+
+  git clone https://github.com/<USERNAME>/amazon-description-scraper
+  pip install -e .[test]
+
+You can then add your feature or commit your bug fix and then run your unit
+testing with::
+
+  pytest
+
+Unit testing will automatically enforce minimum code coverage standards.
+
+Next, to ensure your code meets minimum code styling standards, run::
+
+  pre-commit run --all-files
+
+Finally, `create a pull request`_ from your fork and I'll be sure to review it.

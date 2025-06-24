@@ -6,20 +6,20 @@ build-backend = "setuptools.build_meta"
 name = "amazon-description-scraper"
 description = "Webscrape project to get Amazon products' descriptions"
 authors = [{ name = "Ryzan Bui", email = "ryzan.b@zendom.co.uk" }]
-dependencies = [
-  "bs4",
-  "fake-useragent",
-  "pandas",
-  "requests",
-  "selenium",
-]
+dependencies = ["bs4", "fake-useragent", "pandas", "requests", "selenium"]
 dynamic = ["version"]
 keywords = ["amazon", "scraping"]
 readme = "README.rst"
 requires-python = ">=3.9"
 
+[project.optional-dependencies]
+test = ["pytest", "pytest-cov"]
+
 [project.urls]
 Source = "https://github.com/ryzanbui02/amazon-description-scraper"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
