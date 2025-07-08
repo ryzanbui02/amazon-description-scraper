@@ -3,7 +3,7 @@ import pandas as pd
 
 from concurrent.futures import ThreadPoolExecutor
 from fake_useragent import UserAgent
-from typing import Dict, List, Optional
+from typing import Dict, List, Literal, Optional
 
 from amzsc.modules.chrome_driver import AmazonDriver, ChromeDriverConfig
 from amzsc.modules.proxy import get_proxy
@@ -110,7 +110,7 @@ class AmazonScraper:
         self,
         asins: List[str],
         marketplaces: Optional[List[str]] = None,
-        marketplace: Optional[str] = None,
+        marketplace: Optional[Literal["US", "UK", "DE", "FR", "ES", "IT"]] = None,
         thread_count: int = 10,
     ) -> pd.DataFrame:
         if len(asins) == 0:
