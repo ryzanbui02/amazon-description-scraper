@@ -1,14 +1,13 @@
 from typing import Dict
-from selenium.webdriver import Chrome
+
 from selenium.webdriver.common.by import By
 
-from amzsc.modules.chrome_driver.driver_manipulator import ChromeManipulator
 from amzsc.handlers import safe_method
+from amzsc.modules.chrome_driver.driver_manipulator import ChromeManipulator
 from amzsc.utils import Constants, CustomTypes
 
 
 class AmazonDriver(ChromeManipulator):
-
     def __init__(self, driver: CustomTypes.DRIVER_TYPE) -> None:
         super().__init__(driver)
 

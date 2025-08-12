@@ -1,12 +1,10 @@
-import selenium.common.exceptions as se
-from selenium.webdriver import Chrome
+from typing import Callable, Tuple, Union
+
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.remote.webelement import WebElement
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import Select, WebDriverWait
-from typing import Any, Callable, Tuple, Union
-from amzsc.utils import CustomTypes
+from selenium.webdriver.support.ui import WebDriverWait
 
+from amzsc.utils import CustomTypes
 
 CONDITION_TYPE = Callable[
     [Tuple[str, str]], Callable[[WebDriver], Union[WebElement, bool]]

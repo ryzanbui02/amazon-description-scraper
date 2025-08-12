@@ -1,8 +1,9 @@
-import requests
 from typing import Dict, Optional
+
+import requests
+
 from amzsc.handlers import safe_method
 from amzsc.utils import Constants
-
 
 RESPONSE_STATUS = {"ERROR": "error", "SUCCESS": "success"}
 
@@ -49,5 +50,7 @@ class ProxyRequest:
             if data["status"] == "Live":
                 return True
             return False
-        except:
+        except requests.RequestException:
+            return False
+        except Exception:
             return False

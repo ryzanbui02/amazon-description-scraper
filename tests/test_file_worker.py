@@ -1,11 +1,13 @@
 import os
+from pathlib import Path
+
 from amzsc.utils.file_worker import write_to_json
 
 
 def test_write_to_json() -> None:
     """Test the write_to_json function."""
     data = {"key": "value"}
-    file_path = "test_output.jsonl"
+    file_path = Path("test_output.jsonl")
 
     try:
         write_to_json(file_path, data)

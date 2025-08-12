@@ -1,4 +1,7 @@
+from pathlib import Path
+
 import pandas as pd
+
 from amzsc import AmazonScraper
 
 
@@ -7,7 +10,7 @@ def test_amazon_scraper() -> None:
     proxy_key = "demo_proxy_key"
     scraper = AmazonScraper(
         proxy_key=proxy_key,
-        jsonl_output_path="data/pytest_output.jsonl",
+        jsonl_output_path=Path("data/pytest_output.jsonl"),
         headless=True,
         logging_level="DEBUG",
     )

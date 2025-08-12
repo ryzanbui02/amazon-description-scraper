@@ -1,5 +1,6 @@
-from selenium.webdriver import Chrome, Remote
 from typing import Union
+
+from selenium.webdriver import Chrome, Remote
 
 
 class CustomTypes:

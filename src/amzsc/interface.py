@@ -1,17 +1,16 @@
 import logging
-import pandas as pd
-
 from concurrent.futures import ThreadPoolExecutor
-from fake_useragent import UserAgent
 from pathlib import Path
 from typing import Dict, List, Literal, Optional
+
+import pandas as pd
+from fake_useragent import UserAgent
 
 from amzsc.modules.chrome_driver import AmazonDriver, ChromeDriverConfig
 from amzsc.modules.proxy import get_proxy
 from amzsc.utils import Constants
 from amzsc.utils.file_worker import write_to_json
 from amzsc.utils.marketplace import get_zone
-
 
 logger = logging.getLogger(__name__)
 
@@ -82,7 +81,6 @@ def scrape_all(
 
 
 class AmazonScraper:
-
     def __init__(
         self,
         proxy_key: Optional[str] = None,

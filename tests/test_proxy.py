@@ -1,4 +1,4 @@
-from amzsc.modules.proxy import get_proxy, ProxyRequest
+from amzsc.modules.proxy import ProxyRequest, get_proxy
 
 
 def test_get_proxy():

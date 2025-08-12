@@ -1,6 +1,7 @@
 from typing import Optional
-from amzsc.modules.proxy.proxy_request import ProxyRequest
+
 from amzsc.handlers import safe_method
+from amzsc.modules.proxy.proxy_request import ProxyRequest
 
 
 @safe_method

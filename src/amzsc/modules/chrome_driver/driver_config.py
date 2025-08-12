@@ -1,10 +1,11 @@
-from selenium.webdriver import ChromeOptions, Chrome, Remote
 from typing import Optional
+
+from selenium.webdriver import Chrome, ChromeOptions, Remote
+
 from amzsc.utils import Constants
 
 
 class ChromeDriverConfig:
-
     @staticmethod
     def get_options(**kwargs) -> ChromeOptions:
         options = ChromeOptions()
